@@ -1,0 +1,97 @@
+.main_div {
+  height: 100px;
+background: linear-gradient(180deg, #FFFFFF 0%, #000000 100%), linear-gradient(90deg, #FFFFFF 0%, #000000 100%), #00FFFF;
+  background-blend-mode: multiply, screen, normal;
+  padding: 0 20px;
+  color: rgb(250, 250, 250);
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  float: left;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap:5px;
+  margin-left: auto;
+
+}
+
+.menu a {
+  color: rgb(250, 250, 250);
+  padding: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.show_menu_btn,
+.hide_menu_btn {
+  font-size: 30px;
+  display: none;
+  transition: 0.4s;
+  cursor: pointer;
+  user-select: none;
+}
+.menu a:hover,
+.show_menu_btn:hover,
+.hide_menu_btn:hover {
+  color: rgb(209, 15, 15);
+}
+
+.show_menu_btn {
+  margin-left: auto;
+}
+
+.show_menu_btn i {
+  line-height: 100px;
+}
+
+.chack {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+@media screen and (max-width: 800px) {
+  .show_menu_btn,
+  .hide_menu_btn {
+    display: block;
+  }
+  .menu a {
+    display: block;
+    padding: 30px;
+  }
+  .menu {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    display: block;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    text-align: center;
+    background: rgb(231, 112, 112);
+    flex-direction: row;
+    padding: 10px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 3;
+  }
+  .hide_menu_btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+ 
+  .chack:checked ~ .menu {
+    right: 0;
+  }
+}
