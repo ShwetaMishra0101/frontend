@@ -11,7 +11,6 @@ import SignUp from '../Components/SignUp'
 const AllRoutes = () => {
   return (
     <>
-    
     <Routes>
     <Route path='/' element={<HomePage/>}/>
     <Route path='/login' element={<Login/>}/>
