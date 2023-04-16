@@ -10,7 +10,6 @@ import SignUp from '../Components/SignUp'
 // Here is All Routes for Navigate..
 const AllRoutes = () => {
   return (
-    
     <>
     <Routes>
     <Route path='/' element={<HomePage/>}/>
